@@ -1,4 +1,19 @@
 # dwr-struts-jndi-dbcp
+
+## context.xml 
+* tomcat(.smarttomcat) /conf/context.xml
+    <!-- MySQL 데이터베이스 설정 -->
+    <Resource name="jdbc/mydb"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/kunnodae"
+              username="root"
+              password="1234"
+              maxTotal="20"
+              maxIdle="10"
+              maxWaitMillis="-1" />
+              
 ## -- kunnodae.test1234 definition
 
 CREATE TABLE `test1234` (
